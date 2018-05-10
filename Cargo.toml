@@ -1,0 +1,9 @@
+[package]
+name = "cute-prompt-site"
+version = "0.1.0"
+authors = ["d0iasm"]
+
+[lib]
+create-type = ["cdylib"]
+
+[dependencies]
