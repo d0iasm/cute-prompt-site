@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <title>Cute Prompt</title>
+  </head>
+  <body>
+    <h1>Cute Prompt!</h1>
+
+    <script>
+      fetch('add.wasm')
+  .then(response => response.arrayBuffer())
+  .then(bytes => WebAssembly.instantiate(bytes, {}))
+  .then(results => {
+    alert(results.instance.exports.add_one(41));
+  });
+    </script>
+  </body>
+</html>
