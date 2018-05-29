@@ -1,9 +1,11 @@
 [package]
 name = "cute-prompt-site"
 version = "0.1.0"
-authors = ["d0iasm"]
+authors = ["d0iasm <https://d0iasm.github.io>"]
 
 [lib]
 create-type = ["cdylib"]
 
 [dependencies]
+stdweb = ">=0.4.6"
+
