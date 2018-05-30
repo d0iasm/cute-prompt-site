@@ -1,13 +1,12 @@
-#[macro_use]
-extern crate stdweb;
+extern crate turtle;
+
+use turtle::Turtle;
 
 fn main() {
-    stdweb::initialize();
+    let mut turtle = Turtle::new();
 
-    let message = "Hello, 世界!";
-    js! {
-        alert( @{message} );
+    for _ in 0..360 {
+        turtle.forward(3.0);
+        turtle.right(1.0);
     }
-
-    stdweb::event_loop();
 }
