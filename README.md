@@ -7,8 +7,10 @@ The website for the description of cute-prompt project.
 ### Build
 
 ```
-$ cargo build --target=wasm32-unknown-unknown
+$ cargo +nightly build --target=wasm32-unknown-unknown
+$ cargo +nightly build --target=wasm32-unknown-unknown --release
 ```
+
 
 ### Compile to WebAssembly using Rust's native WebAssembly backend
 
