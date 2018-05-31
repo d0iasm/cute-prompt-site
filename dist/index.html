@@ -6,9 +6,10 @@
   </head>
   <body>
     <h1>Cute Prompt!</h1>
+    <div id="canvas"></div>
 
     <script>
-      fetch('add.wasm')
+      fetch('lib.wasm')
   .then(response => response.arrayBuffer())
   .then(bytes => WebAssembly.instantiate(bytes, {}))
   .then(results => {

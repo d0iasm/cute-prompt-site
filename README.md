@@ -11,6 +11,11 @@ $ cargo +nightly build --target=wasm32-unknown-unknown
 $ cargo +nightly build --target=wasm32-unknown-unknown --release
 ```
 
+### Run
+
+```
+$ python3 -m http.server 8000
+```
 
 ### Compile to WebAssembly using Rust's native WebAssembly backend
 
