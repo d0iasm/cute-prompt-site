@@ -6,7 +6,7 @@
   </head>
   <body>
     <h1>Cute Prompt!</h1>
-    <div id="canvas"></div>
+    <canvas id="screen" width="500" height="500"></canvas>
 
     <script>
       fetch('lib.wasm')
@@ -16,5 +16,6 @@
     alert(results.instance.exports.add_one(41));
   });
     </script>
+    <script src="loader.js"></script>
   </body>
 </html>

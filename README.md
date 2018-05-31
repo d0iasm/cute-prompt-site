@@ -11,6 +11,11 @@ $ cargo +nightly build --target=wasm32-unknown-unknown
 $ cargo +nightly build --target=wasm32-unknown-unknown --release
 ```
 
+```
+$ rustc +nightly --target wasm32-unknown-unknown -O --crate-type=cdylib src/hoge.rs -o hoge.big.wasm
+$ wasm-gc hoge.big.wasm hoge.wasm
+```
+
 ### Run
 
 ```
