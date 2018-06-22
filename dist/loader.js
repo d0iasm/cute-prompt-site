@@ -1,4 +1,4 @@
-console.log("canvas loader");
+console.log("canvas loader!!!");
 
 fetch("canvas.wasm").then(response =>
   response.arrayBuffer()
@@ -9,19 +9,22 @@ fetch("canvas.wasm").then(response =>
 ).then(results => {
   let module = {};
   let mod = results.instance;
-  module.alloc   = mod.exports.alloc;
+  module.alloc = mod.exports.alloc;
   module.dealloc = mod.exports.dealloc;
-  module.fill    = mod.exports.fill;
+  module.fill = mod.exports.fill;
 
-  var width  = 500;
-  var height = 500;
+  const width = window.innerWidth;
+  const height = window.innerHeight;
 
   var canvas = document.getElementById('screen');
+  canvas.width = width;
+  canvas.height = height;
+
   console.log(canvas);
 
   if (canvas.getContext) {
     var ctx = canvas.getContext('2d');
-
+    
     let byteSize = width * height * 4;
     var pointer = module.alloc( byteSize );
 
