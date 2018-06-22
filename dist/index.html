@@ -3,18 +3,29 @@
   <head>
     <meta charset="utf-8">
     <title>Cute Prompt</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+  </style>
   </head>
   <body>
-    <h1>Cute Prompt!</h1>
-    <canvas id="screen" width="500" height="500"></canvas>
+    <!-- <h1>Cute Prompt!</h1> -->
+    <div id="wrapper">
+      <canvas id="screen" width="500" height="500"></canvas>
+    </div>
 
     <script>
-      fetch('lib.wasm')
-  .then(response => response.arrayBuffer())
-  .then(bytes => WebAssembly.instantiate(bytes, {}))
-  .then(results => {
-    alert(results.instance.exports.add_one(41));
-  });
+//      fetch('lib.wasm')
+//  .then(response => response.arrayBuffer())
+//  .then(bytes => WebAssembly.instantiate(bytes, {}))
+//  .then(results => {
+//    alert(results.instance.exports.add_one(41));
+//  });
+      let canvas = document.getElementById("screen");
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     </script>
     <script src="loader.js"></script>
   </body>
